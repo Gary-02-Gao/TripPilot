@@ -1,0 +1,62 @@
+[
+  {
+    "conversation": [
+      {
+        "role": "system",
+        "content": "这是公开的合成工具调用示例。出发日期为 2026-10-01。"
+      },
+      {
+        "role": "user",
+        "content": "嘉兴三日游"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "demo_guide",
+            "type": "function",
+            "function": {
+              "name": "search_travel_guide",
+              "arguments": "{\"location\":\"330400\"}"
+            }
+          },
+          {
+            "id": "demo_weather",
+            "type": "function",
+            "function": {
+              "name": "get_weather_info",
+              "arguments": "{\"location\":\"330400\",\"start_date\":\"2026-10-01\",\"num_days\":3}"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "conversation": [
+      {
+        "role": "system",
+        "content": "这是公开的合成工具调用示例。起点使用 Demo 的预设上海坐标 121.473701,31.230416，不代表用户位置。"
+      },
+      {
+        "role": "user",
+        "content": "去上海博物馆怎么走"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "demo_route",
+            "type": "function",
+            "function": {
+              "name": "query_route",
+              "arguments": "{\"start_location\":\"121.473701,31.230416\",\"end_location\":\"上海博物馆\",\"city_code\":\"310000\"}"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

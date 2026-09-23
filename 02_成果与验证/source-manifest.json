@@ -105,8 +105,9 @@
   {
     "file": "tests/test_canonicalize_sequential_dataset.py",
     "source_sha256": "40204d25517f3a5d294ced9f6cc49c5733ec5de1a2c56c491cd2c8ec7b467c2f",
-    "included_sha256": "40204d25517f3a5d294ced9f6cc49c5733ec5de1a2c56c491cd2c8ec7b467c2f",
-    "transformation": "none"
+    "included_sha256": "1603568e9db9de53bbba869af97cf4669861e747a5a17fd7c34f934e87c560cf",
+    "transformation": "add end-to-end CLI regression using public synthetic examples",
+    "archived_included_sha256": "40204d25517f3a5d294ced9f6cc49c5733ec5de1a2c56c491cd2c8ec7b467c2f"
   },
   {
     "file": "tests/test_evaluate_fc.py",
@@ -139,5 +140,12 @@
     "source_sha256": "bbc3d29c6e5a95c481db189a689da26c6b465abcb45ab03f87e11699a13caf22",
     "included_sha256": "9ffc7cc5cdbbd84b616528e725141884d6654170c5d5d448b081ba21f91c1955",
     "transformation": "generation timestamp and elapsed-time metadata omitted"
+  },
+  {
+    "file": "examples/city_code_mapping.json",
+    "source_file": "TripPilot-LoRA-Portfolio/configs/city_code_mapping.json",
+    "source_sha256": "78c38eb41a0f50f83ad575d65a064739ae38f64c774b40aac25fb1fa95093335",
+    "included_sha256": "aba975f0b2842fe2bceb770b42cd237389d00212b712047dbfb6f2b016dbb088",
+    "transformation": "select Jiaxing, Hangzhou and Shanghai; retain only name fields"
   }
 ]

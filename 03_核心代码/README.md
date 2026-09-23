@@ -33,7 +33,9 @@ python3 demo_server.py --host 127.0.0.1 --port 8091
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
 ```
 
-**14/14 通过。** 覆盖工具依赖顺序、需求补全、酒店链、路线参数契约、领域拒答、参数规范化与 Function Calling 解析；包含异常模型 JSON 和混合损坏调用的回归测试。原始浏览器检查记录见 `../02_成果与验证/frontend-verification.json`，最新核验见 `../本地环境验证.md`。
+**15/15 通过。** 覆盖工具依赖顺序、需求补全、酒店链、路线参数契约、领域拒答、参数规范化与 Function Calling 解析；包含异常模型 JSON、混合损坏调用和实际数据转换 CLI 的回归测试。原始浏览器检查记录见 `../02_成果与验证/frontend-verification.json`，最新核验见 `../本地环境验证.md`。
+
+数据转换所需的最小城市映射与合成输入已放在 [examples/](examples/README.md)，可以完全使用仓内文件验证顺序化转换；它们不替代原始训练数据。
 
 ## 训练与模型重建
 
