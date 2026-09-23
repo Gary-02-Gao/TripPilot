@@ -1,0 +1,19 @@
+{
+  "base_model": "Qwen3-0.6B",
+  "merge_order": [
+    {
+      "adapter": "safari_3ep_adapter",
+      "sha256": "1a296a1c63a32a78d97fa7da1c4a2f410be3fb8f43352ffd56b866094f92c1d1"
+    },
+    {
+      "adapter": "repair_v1_adapter",
+      "sha256": "ab2f3f7038d9feacd8add8f6443fc4ded7981eb3bb7791c698b169a796130c25"
+    },
+    {
+      "adapter": "sequential_v1_adapter",
+      "sha256": "44876afc0099284ffc3040fa050cb74c45b1353781402e835dca2dcce73f9b50"
+    }
+  ],
+  "local_adapter_hashes_verified": true,
+  "evaluation_protocol": "sequential_v2"
+}

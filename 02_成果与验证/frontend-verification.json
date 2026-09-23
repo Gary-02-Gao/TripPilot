@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": [
+    "missing destination prompts without tool calls",
+    "multi-turn completion preserves guide -> weather order",
+    "tool trace supports keyboard expansion and collapse",
+    "out-of-domain request refuses without tools",
+    "archived sample preserves real model output and provenance label",
+    "metrics render actual counts with separate denominators",
+    "768px workspace and evaluation have no horizontal overflow",
+    "390px workspace and evaluation have no horizontal overflow",
+    "user HTML is escaped and never executed",
+    "invalid API payload returns 400",
+    "no uncaught browser errors"
+  ]
+}

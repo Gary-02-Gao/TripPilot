@@ -1,0 +1,143 @@
+[
+  {
+    "file": "canonicalize_sequential_dataset.py",
+    "source_sha256": "1e52a68c98cacbd2d8e1e5fc6f219f2416b2d6bafaa86527d79b4f6eb6338bec",
+    "included_sha256": "1e52a68c98cacbd2d8e1e5fc6f219f2416b2d6bafaa86527d79b4f6eb6338bec",
+    "transformation": "none"
+  },
+  {
+    "file": "conversation_splitter.py",
+    "source_sha256": "7dd89a60345d035c4d568788abe3e189d397b484be84c7243cc37c2fb2bd2da5",
+    "included_sha256": "cbc1d6196b57a9e25dcf3f41df76c0dad099e2a77e633c77587167d4f28cbedf",
+    "transformation": "publication review: trim trailing whitespace only",
+    "archived_included_sha256": "7dd89a60345d035c4d568788abe3e189d397b484be84c7243cc37c2fb2bd2da5"
+  },
+  {
+    "file": "build_weighted_repair_dataset.py",
+    "source_sha256": "5f775da54145ba5658baf908b4ea1c4058ae14a4d93a1a9e58bc4a27fe17818f",
+    "included_sha256": "5f775da54145ba5658baf908b4ea1c4058ae14a4d93a1a9e58bc4a27fe17818f",
+    "transformation": "none"
+  },
+  {
+    "file": "inspect_qwen_dataset.py",
+    "source_sha256": "4064e972a02ad1333a8d48c080dd5fe2dea47461d6c1cb5934c21e31cb0a6a94",
+    "included_sha256": "8254945f176dffba6466159a2e9ffaa1e8f7aa9b147f05bf86b7f3078ab88537",
+    "transformation": "deployment example comment paths made relative; publication review: trim trailing whitespace only",
+    "archived_included_sha256": "622bc22a8ce303ec057374fb300523c88c5ddd418a4957239bf6a13e5eefca6b"
+  },
+  {
+    "file": "train_qwen_last_assistant_lora.py",
+    "source_sha256": "254acafcc1e6247e50d38b63d217322eb12152565319547cfcf0edb9ddd93dc3",
+    "included_sha256": "3c31d8a091ee454aaf351649e5a4e97fc43bfb386e7ba232eaf4337cc3750be4",
+    "transformation": "publication review: trim trailing whitespace only",
+    "archived_included_sha256": "254acafcc1e6247e50d38b63d217322eb12152565319547cfcf0edb9ddd93dc3"
+  },
+  {
+    "file": "merge_lora_into_base.py",
+    "source_sha256": "d93e87021ed6f390771a13addd222bfe4dcaf3a8f84064a82b5ed5606d02ef32",
+    "included_sha256": "4c6aa67589a729af08100666283c37d663c390927c18187858e89321d885127a",
+    "transformation": "publication review: trim trailing whitespace only",
+    "archived_included_sha256": "d93e87021ed6f390771a13addd222bfe4dcaf3a8f84064a82b5ed5606d02ef32"
+  },
+  {
+    "file": "evaluate_qwen_fc.py",
+    "source_sha256": "2485eca4a12ec1baf11a4fbfb4963a332e81c914097a071fb44c3d3b1152bab1",
+    "included_sha256": "2cfa681d99e2805f18525c93d4b73c61aa04a1a8dc71674a506e3da4888b8144",
+    "transformation": "publication review: reject malformed tool JSON without crashing; require valid parsing for exact call match",
+    "archived_included_sha256": "2485eca4a12ec1baf11a4fbfb4963a332e81c914097a071fb44c3d3b1152bab1"
+  },
+  {
+    "file": "merge_eval_shards.py",
+    "source_sha256": "7c6798f1765df427e1b5f26c4372e6fbf10df819d4be87fcbc6ee274341d4576",
+    "included_sha256": "7c6798f1765df427e1b5f26c4372e6fbf10df819d4be87fcbc6ee274341d4576",
+    "transformation": "none"
+  },
+  {
+    "file": "all_tools_sequential_v2.json",
+    "source_sha256": "214d53107d451ee2b7599c02ed6f875afcf43370056a34625f0c00b7a854a364",
+    "included_sha256": "214d53107d451ee2b7599c02ed6f875afcf43370056a34625f0c00b7a854a364",
+    "transformation": "none"
+  },
+  {
+    "file": "demo_agent.py",
+    "source_sha256": "c0c89f2141c886459a664a7fe19d56c86ce2773075b4caac4f8a0ccc3b61773c",
+    "included_sha256": "03490b4c6dd2916db3c4cad150eb9300108d6dbe5548181ed38ed8a2612a4f35",
+    "transformation": "publication review: align route arguments with v2 schema and clarify simulated route data",
+    "archived_included_sha256": "c0c89f2141c886459a664a7fe19d56c86ce2773075b4caac4f8a0ccc3b61773c"
+  },
+  {
+    "file": "demo_server.py",
+    "source_sha256": "f359c028fbb5bb271fd9b574686376776cf619526b5b92a18427a856b1e5fb65",
+    "included_sha256": "f359c028fbb5bb271fd9b574686376776cf619526b5b92a18427a856b1e5fb65",
+    "transformation": "none"
+  },
+  {
+    "file": "runtime_config.py",
+    "source_sha256": "4dd2f92db50e5e4dfa8cd28d105d6adfb99dc4c09973ddea24557e85b27e4191",
+    "included_sha256": "5d5b90795510036ef3384ce591085077842bfd678fee951529ee20e1be412edd",
+    "transformation": "publication review: trim trailing whitespace only",
+    "archived_included_sha256": "4dd2f92db50e5e4dfa8cd28d105d6adfb99dc4c09973ddea24557e85b27e4191"
+  },
+  {
+    "file": "web/index.html",
+    "source_sha256": "91cdfaef1b403c6efd85c851e2c24cdbb8da1a044dc4a71bf2564b6c062cef15",
+    "included_sha256": "727746e027bee7d562046028d0381eed89e1559365e89d06d904d0871b71c6ab",
+    "transformation": "presentation copy shortened; inference and evaluation logic unchanged"
+  },
+  {
+    "file": "web/style.css",
+    "source_sha256": "7d04d23bc5af6677720be40b9041ec14c1ef3c29cc31e4b7bdd28fea44cddab7",
+    "included_sha256": "7d04d23bc5af6677720be40b9041ec14c1ef3c29cc31e4b7bdd28fea44cddab7",
+    "transformation": "none"
+  },
+  {
+    "file": "web/app.js",
+    "source_sha256": "ce6c633c69e71458cd4ad5424e9dec559f481348f0800b4471e33cc5e6436ddd",
+    "included_sha256": "0307bf2b7677492c2820e0e1a86605cacfe8b19bac0c28b13f9fd4446878e8c3",
+    "transformation": "presentation copy shortened; inference and evaluation logic unchanged"
+  },
+  {
+    "file": "web/evaluation.json",
+    "source_sha256": "9b0d09e82e91eb7207bcf473a1ab5ac046cd7707483b1dd56036e0e3cd8a2053",
+    "included_sha256": "9b0d09e82e91eb7207bcf473a1ab5ac046cd7707483b1dd56036e0e3cd8a2053",
+    "transformation": "none"
+  },
+  {
+    "file": "tests/test_canonicalize_sequential_dataset.py",
+    "source_sha256": "40204d25517f3a5d294ced9f6cc49c5733ec5de1a2c56c491cd2c8ec7b467c2f",
+    "included_sha256": "40204d25517f3a5d294ced9f6cc49c5733ec5de1a2c56c491cd2c8ec7b467c2f",
+    "transformation": "none"
+  },
+  {
+    "file": "tests/test_evaluate_fc.py",
+    "source_sha256": "e70549aa98315ea3883856df5a00edca97da0882312ff9d4d0a86930e2b1ae92",
+    "included_sha256": "205ec4811c8d1220858ae70f6020fe6df4591b6c954770bd676dd93509faac2a",
+    "transformation": "publication review: add malformed JSON and strict-match regression coverage",
+    "archived_included_sha256": "e70549aa98315ea3883856df5a00edca97da0882312ff9d4d0a86930e2b1ae92"
+  },
+  {
+    "file": "tests/test_demo_agent.py",
+    "source_sha256": "e040781201118af3256af47c379fe9b4b78bf1bf62e01c707982a54c146b2cd9",
+    "included_sha256": "28f0a6dd954ecdabd8bc5aefc6b539fab11a21886d0244ac6776f236c630b79c",
+    "transformation": "publication review: verify route argument keys",
+    "archived_included_sha256": "e040781201118af3256af47c379fe9b4b78bf1bf62e01c707982a54c146b2cd9"
+  },
+  {
+    "file": "rag-system/original_data/travel_guides/330400_嘉兴_travel_guide.txt",
+    "source_sha256": "0c1791b8a989c5bd01bca0af6561175d0e4fa8585ffb380c4be2f013393e4cf1",
+    "included_sha256": "edd5817e48ab3f448a644f54887939a4a45486e5c991c93b993c1018b7505b1c",
+    "transformation": "generation timestamp and elapsed-time metadata omitted"
+  },
+  {
+    "file": "rag-system/original_data/travel_guides/330100_杭州_travel_guide.txt",
+    "source_sha256": "8e81ed58e394bd24ba8ed00dba8c3e1b414a9ae87a1a293f5962961ae33663a0",
+    "included_sha256": "99d7a7d94de30c6c6b1e4f4e9c2205ff38bced0b1dc504b87236b835c874e91f",
+    "transformation": "generation timestamp and elapsed-time metadata omitted"
+  },
+  {
+    "file": "rag-system/original_data/travel_guides/310000_上海_travel_guide.txt",
+    "source_sha256": "bbc3d29c6e5a95c481db189a689da26c6b465abcb45ab03f87e11699a13caf22",
+    "included_sha256": "9ffc7cc5cdbbd84b616528e725141884d6654170c5d5d448b081ba21f91c1955",
+    "transformation": "generation timestamp and elapsed-time metadata omitted"
+  }
+]

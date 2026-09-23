@@ -1,0 +1,21 @@
+
+# Local environments and runtime files
+.venv/
+.venv-*/
+.runtime/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+
+# Private local configuration
+.env
+.env.*
+!.env.example
+
+# Generated training artifacts
+*.safetensors
+*.pt
+*.pth
+checkpoint-*/

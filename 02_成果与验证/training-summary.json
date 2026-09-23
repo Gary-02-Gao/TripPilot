@@ -1,0 +1,25 @@
+{
+  "base_model": "Qwen3-0.6B",
+  "final_stage_samples": 3048,
+  "data_file": "merged_train_sequential_v1.json",
+  "data_sha256": "5d73f4b5a0fcb46842a952bec89e598518cfc0139cb84f98963d72aaf98ba399",
+  "lora": {
+    "r": 32,
+    "lora_alpha": 64,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "down_proj",
+      "gate_proj",
+      "up_proj",
+      "q_proj",
+      "o_proj",
+      "k_proj",
+      "v_proj"
+    ],
+    "peft_type": "LORA",
+    "task_type": "CAUSAL_LM"
+  },
+  "supervision": "last Assistant message only",
+  "precision": "BF16",
+  "distributed_training": "DDP"
+}

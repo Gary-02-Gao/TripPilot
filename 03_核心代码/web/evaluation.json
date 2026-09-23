@@ -1,0 +1,52 @@
+{
+  "metrics": {
+    "targets": 378,
+    "decision_correct": 352,
+    "tool_targets": 169,
+    "tool_name_sequence_correct": 163,
+    "tool_arguments_correct": 155,
+    "tool_call_exact": 155,
+    "predicted_tool_outputs": 183,
+    "valid_tool_json": 183,
+    "reply_targets": 209,
+    "nonempty_reply": 189,
+    "decision_accuracy": 0.931217,
+    "tool_name_sequence_accuracy": 0.964497,
+    "tool_arguments_accuracy": 0.91716,
+    "tool_call_exact_match": 0.91716,
+    "valid_tool_json_rate": 1.0,
+    "nonempty_reply_rate": 0.904306,
+    "shards": 2
+  },
+  "scope": "200 conversations, sequential protocol v2, teacher-forced assistant-node evaluation",
+  "sample": {
+    "row_index": 10,
+    "query": "我要在广州住酒店，预算200-300元",
+    "text": "根据您的预算（200-300元）和需求，为您推荐以下酒店：\n\n### 广州白云机场美居酒店\n**位置**: 广州市白云区机场路288号\n\n#### 用户评价：\n1. **评分**: 4/5  \n   **评论**: 酒店位置很好，房间干净整洁，服务人员态度友好。早餐种类丰富，性价比不错。\n\n2. **评分**: 5/5  \n   **评论**: 商务设施齐全，会议室很专业，网络稳定。房间安静，适合工作和休息。\n\n这家酒店不仅地理位置优越，而且设施齐全，非常适合您的住宿需求。希望您在广州的旅程愉快！",
+    "tools": [
+      {
+        "name": "recommend_hotels",
+        "arguments": {
+          "requirements": "我要在广州住酒店，预算200-300元"
+        },
+        "result_preview": "根据您的需求，推荐以下酒店:\n\n酒店1: 广州白云机场美居酒店\n位置: 广州市白云区机场路288号\n\n",
+        "status": "archived"
+      },
+      {
+        "name": "get_hotel_reviews",
+        "arguments": {
+          "hotel_name": "广州白云机场美居酒店"
+        },
+        "result_preview": "广州白云机场美居酒店的用户评价:\n\n评价1:\n评分: 4/5\n评论: 酒店位置很好，房间干净整洁，服务人员态度友好。早餐种类丰富，性价比不错。\n\n评价2:\n评分: 5/5\n评论: 商务设施齐全，会议室很专业，网络稳定。房间安静，适合工作和休息。\n\n",
+        "status": "archived"
+      }
+    ],
+    "workflow": "酒店查询"
+  },
+  "provenance": {
+    "training_outputs/evaluation/sequential_v1_on_v2/metrics.json": "4b393e3ce0d4b413930a6a37caa15596daa11fd5da648c2aa3d11409f7eed7e8",
+    "training_outputs/evaluation/sequential_v1_on_v2/predictions.jsonl": "e8f29bd02fee2697b457f0c9b50206e39405f0b22efa6f3d44f688360877c625",
+    "merged_test_sequential_v2.json": "e0f836c30616dd417e68df73c4782b397569d36fe8c3345dd74a8318dd64bfdd"
+  },
+  "privacy": "System profile, user name, coordinates, full dataset and server paths omitted."
+}

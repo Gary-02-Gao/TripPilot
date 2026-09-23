@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TripPilot · 旅行智能体</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="TripPilot 首页"><span class="brand-mark" aria-hidden="true">↗</span><span>TripPilot<small>TRAVEL, WITH INTENTION.</small></span></a>
+    <nav aria-label="主导航"><button id="workspace-tab" class="nav-tab active" aria-selected="true">旅行工作台</button><button id="evaluation-tab" class="nav-tab" aria-selected="false">训练与评测</button></nav>
+    <div class="top-actions"><span class="model-label">Qwen3 <b>0.6B</b> / LoRA</span><button id="reset" class="quiet-button">新对话 <span aria-hidden="true">＋</span></button></div>
+  </header>
+  <main>
+    <section id="workspace-view" class="workspace">
+      <div class="conversation">
+        <div class="section-top"><span>YOUR NEXT JOURNEY</span><span id="mode-badge" class="mode-badge">离线工作流 · 模拟工具</span></div>
+        <div id="chat" aria-live="polite" aria-label="旅行对话">
+          <div class="welcome" id="welcome"><span class="eyebrow">把计划，留给旅途之前。</span><h1>下一站，<br>想去哪里？</h1><p>从一个想法开始。补全目的地，找到攻略，<br>让每一步工具调用都有明确的依据。</p>
+            <div class="suggestions"><button data-q="帮我规划一次旅行"><span>先有一个想法</span><small>信息不足时，先追问</small><i>↗</i></button><button data-q="嘉兴三日游"><span>安排一段旅程</span><small>攻略检索，再查询天气</small><i>↗</i></button><button data-q="推荐杭州500-800元的酒店"><span>找一处合适的住宿</span><small>酒店推荐，再查看评价</small><i>↗</i></button><button data-q="从外滩到上海博物馆怎么走"><span>从这里，去那里</span><small>查询不同出行路线</small><i>↗</i></button></div>
+          </div>
+        </div>
+        <div class="composer-wrap"><form id="form" class="composer"><label class="sr-only" for="input">输入旅行需求</label><textarea id="input" rows="2" placeholder="告诉我目的地、预算，或一个模糊的旅行想法…"></textarea><div class="composer-bottom"><span>Enter 发送 · Shift + Enter 换行</span><button id="send" aria-label="发送消息" title="发送消息">↗</button></div></form><p class="composer-note">离线流程演示 · 天气、酒店与路线使用模拟数据。</p></div>
+      </div>
+      <aside class="trace-panel" aria-label="工具调用轨迹"><div class="trace-heading"><div><span class="eyebrow">BEHIND THE ANSWER</span><h2>每一步，都看得见。</h2></div><span id="tool-count" class="counter">00</span></div>
+        <div id="trace" aria-live="polite"><div class="trace-empty"><div class="empty-line"><b>01</b><div>理解需求<small>判断意图，补全缺失信息</small></div></div><div class="empty-line"><b>02</b><div>按依赖顺序调用<small>先获得结果，再生成下一步参数</small></div></div><div class="empty-line"><b>03</b><div>整合工具结果<small>将信息组织为可读的回复</small></div></div></div></div>
+        <div class="trace-footer"><span>想看看微调后的真实输出？</span><button id="replay" class="replay-button">打开归档 LoRA 样本 <span>↗</span></button><small>模型预测及工具上下文来自评测记录，非实时推理。</small></div>
+      </aside>
+    </section>
+    <section id="evaluation-view" class="evaluation" hidden><div class="eval-heading"><span class="eyebrow">SMALL MODEL. EXPLICIT ACTIONS.</span><h1>让小模型，<br>学会正确调用工具。</h1><p>Qwen3-0.6B · 最后一条 Assistant 监督 · 顺序化 Function Calling</p></div>
+      <div id="metric-cards" class="metric-cards"></div>
+      <div class="eval-grid"><article><span class="eyebrow">01 / DATA CONTRACT</span><h2>先理清依赖，再训练。</h2><p>攻略先返回结构化摘要，天气工具再读取目的地与天数。城市与参数契约统一，避免提前猜测尚未出现的结果。</p><div class="mini-flow"><span>用户需求</span><b>→</b><span>工具结果</span><b>→</b><span>下一步参数</span></div></article><article><span class="eyebrow">02 / TRAINING & VERIFICATION</span><h2>监督边界明确，结果可以追溯。</h2><p>LoRA rank 32；仅最后一条 Assistant 参与 Loss。保留适配器合并顺序、权重哈希、预测记录与分项严格评测。</p><div class="training-tags"><span>BF16</span><span>DDP</span><span>Last-assistant loss</span></div></article></div>
+      <div class="eval-scope"><strong>评测口径</strong><p id="evaluation-scope"></p><p>顺序化协议 v2：给定标准历史上下文，逐个 Assistant 节点独立评分。工具名与参数按精确匹配计算。</p></div>
+    </section>
+  </main>
+</body>
+</html>
